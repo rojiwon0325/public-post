@@ -97,7 +97,8 @@
     "moduleNameMapper": {
       "^src/(.*)$": "<rootDir>/../src/$1",
       "@COMMON/(.*)$": "<rootDir>/../src/api/common/$1",
-      "@CRYPTO/(.*)$": "<rootDir>/../src/api/crypto/$1"
+      "@CRYPTO/(.*)$": "<rootDir>/../src/api/crypto/$1",
+      "@PP/(.*)$": "<rootDir>/../src/api/pp/$1"
     },
     "coveragePathIgnorePatterns": [
       "main.ts",

@@ -19,10 +19,12 @@ export namespace PublicPost {
      */
     password: string;
   }
+
+  export type Public = Omit<State, 'password'>;
 }
 
 export interface PublicPost {
-  getPublic: (agg: PublicPost.State) => Omit<PublicPost.State, 'password'>;
+  getPublic: (agg: PublicPost.State) => PublicPost.Public;
 }
 
 const PublicPost: PublicPost = {
