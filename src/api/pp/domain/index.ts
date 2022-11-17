@@ -6,18 +6,18 @@ export namespace PublicPost {
     /**
      * @maxLength 20
      */
-    title: string;
+    readonly title: string;
     /**
      * @maxLength 200
      */
-    contents: string;
+    readonly contents: string;
 
     /**
      * 숫자를 하나 이상 포함한 6자리 이상의 문자열
      * 특수문자는 허용하지 않는다.
      * @pattern ^(?=.*\d)[A-Za-z\d]{6,}$
      */
-    password: string;
+    readonly password: string;
   }
 
   export type Public = Omit<State, 'password'>;
