@@ -1,4 +1,4 @@
-# Public Post,공공 게시판 서비스
+# Public Post,공개 게시판 서비스
 
 <div align=center>
 
