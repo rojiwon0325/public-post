@@ -1,10 +1,22 @@
-import { Controller, Delete, Get, Patch, Post, Query } from '@nestjs/common';
+import {
+  Controller,
+  Delete,
+  Get,
+  Inject,
+  Patch,
+  Post,
+  Query,
+} from '@nestjs/common';
+import { PPUsecase } from '@PP/application/adapter/pp.usecase';
 import { IPPUsecase } from '@PP/application/port/pp.usecase.port';
 import helper from 'nestia-helper';
 
 @Controller('posts')
 export class PPController {
-  constructor(private readonly usecase: IPPUsecase) {}
+  constructor(
+    @Inject(PPUsecase)
+    private readonly usecase: IPPUsecase,
+  ) {}
 
   /**
    * 게시글 목록 조회

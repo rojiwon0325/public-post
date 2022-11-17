@@ -1,15 +1,17 @@
 import { Crypto } from '@CRYPTO/domain';
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { PublicPost } from '@PP/domain';
 import { PPEntity } from '@PP/infrastructure/pp.entity';
 import { Repository } from 'typeorm';
 import { IPPService } from '../port/pp.service.port';
 import { IPPUsecase } from '../port/pp.usecase.port';
+import { PPService } from './pp.service';
 
 @Injectable()
 export class PPUsecase implements IPPUsecase {
   constructor(
+    @Inject(PPService)
     private readonly service: IPPService,
     @InjectRepository(PPEntity)
     private readonly repository: Repository<PPEntity>,
