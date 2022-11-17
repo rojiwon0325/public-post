@@ -1,13 +1,8 @@
 import { PublicPost } from '@PP/domain';
 
 export namespace IPPService {
-  export type Create = Pick<
-    PublicPost.State,
-    'title' | 'contents' | 'password'
-  >;
-  export interface FindMany {
-    page?: number;
-  }
+  export type FindOne = Pick<PublicPost.State, 'id'>;
+
   export interface CheckPassword {
     password: string;
     hashed: string;
@@ -15,7 +10,6 @@ export namespace IPPService {
 }
 
 export interface IPPService {
-  create: (data: IPPService.Create) => Promise<PublicPost.State>;
-  findMany: (filter: IPPService.FindMany) => Promise<PublicPost.Public>;
+  findOne: (filter: IPPService.FindOne) => Promise<PublicPost.State>;
   checkPassword: (args: IPPService.CheckPassword) => Promise<void>;
 }

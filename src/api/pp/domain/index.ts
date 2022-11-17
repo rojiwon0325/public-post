@@ -27,7 +27,7 @@ export interface PublicPost {
   getPublic: (agg: PublicPost.State) => PublicPost.Public;
 }
 
-const PublicPost: PublicPost = {
+export const PublicPost: PublicPost = {
   getPublic(agg) {
     const { id, title, contents, created_at, updated_at } = agg;
     return { id, title, contents, created_at, updated_at };
