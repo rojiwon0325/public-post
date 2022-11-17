@@ -1,12 +1,4 @@
-import {
-  Controller,
-  Delete,
-  Get,
-  Inject,
-  Patch,
-  Post,
-  Query,
-} from '@nestjs/common';
+import { Controller, Get, Inject, Patch, Post, Query } from '@nestjs/common';
 import { PPUsecase } from '@PP/application/adapter/pp.usecase';
 import { IPPUsecase } from '@PP/application/port/pp.usecase.port';
 import helper from 'nestia-helper';
@@ -71,7 +63,7 @@ export class PPController {
    * @throw 404 게시글이 존재하지 않는 경우
    * @returns
    */
-  @Delete(':pp_id')
+  @Post(':pp_id')
   remove(
     @helper.TypedParam('pp_id', 'number') id: number,
     @helper.TypedBody() body: IPPUsecase.RemoveBody,

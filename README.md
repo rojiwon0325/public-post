@@ -26,5 +26,3 @@
 ## API 문서
 
 - [View in the `Swagger Editor`](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rojiwon0325/public-post/main/doc/swagger.json)
-
-## 진행상황

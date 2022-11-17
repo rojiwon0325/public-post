@@ -2,13 +2,13 @@
   "openapi": "3.0.1",
   "servers": [
     {
-      "url": "https://github.com/rojiwon0325/nestddd",
-      "description": "nestjs template for ddd"
+      "url": "https://github.com/rojiwon0325/public-post",
+      "description": "Public Post"
     }
   ],
   "info": {
     "version": "0.0.1",
-    "title": "NestDDD - nestjs template designed DDD"
+    "title": "누구나 사용가능한 공개 게시판 서비스"
   },
   "paths": {
     "/posts": {
@@ -124,7 +124,7 @@
         },
         "description": "게시물글 수정"
       },
-      "delete": {
+      "post": {
         "tags": [
           "PP"
         ],
@@ -152,7 +152,7 @@
           "required": true
         },
         "responses": {
-          "200": {
+          "201": {
             "description": ""
           },
           "403": {
