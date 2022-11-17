@@ -13,6 +13,7 @@ export const TypeOrmModule = OriginalOrmModule.forRootAsync({
     database: configService.get('DB_DATABASE'),
     synchronize: true,
     logging: false,
+    charset: 'utf8mb4',
     entities:
       configService.get('NODE_ENV') === 'test'
         ? ['src/**/*.entity{.ts,.js}']
